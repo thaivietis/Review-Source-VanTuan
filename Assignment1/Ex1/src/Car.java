@@ -1,17 +1,11 @@
-public class Car extends Vehicle{
+public class Car extends Vehicle implements Action{
 
-    private String engine;
+    private ChinaEngine engine;
 
-    public Car(String engine) {
+    public Car() {
         super();
-        this.engine = "";
+        this.engine = new ChinaEngine();
     }
-
-    public Car(String name, String brand, int numberOfWheel, String engine) {
-        super(name, brand, numberOfWheel);
-        this.engine = engine;
-    }
-
 
     @Override
     public void run() {
@@ -23,7 +17,15 @@ public class Car extends Vehicle{
         System.out.println("The car has stopped !");
     }
 
+    @Override
+    public void setTemperature() {
+        System.out.println("The temperature is 90F");
+    }
+
     public void refuel() {
         System.out.println("The car has been fully refueled");
     }
+}
+
+class ChinaEngine {
 }

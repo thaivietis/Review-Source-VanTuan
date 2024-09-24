@@ -10,17 +10,15 @@ public abstract class Vehicle {
         this.numberOfWheel = 0;
     };
 
-    public Vehicle(String name, String brand, int numberOfWheel) {
-        this.name = name;
-        this.brand = brand;
-        this.numberOfWheel = numberOfWheel;
+    public void refuel(){
+        System.out.println("The vehicle has been fully refueled");
     }
 
-    abstract void run();
+    void formatDate() {
+        // format to DD/MM/YYYY
+    }
 
-    abstract void stop();
-
-    public void refuel(){
-        System.out.println("The car has been fully refueled");
+    void connectToDatabase() {
+        // connect to database
     }
 }

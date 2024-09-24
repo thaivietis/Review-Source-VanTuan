@@ -1,4 +1,4 @@
-public class Bicycle extends Vehicle{
+public class Bicycle extends Vehicle implements Action{
     @Override
     public void run() {
         System.out.println("The bicycle is running...");
@@ -7,6 +7,11 @@ public class Bicycle extends Vehicle{
     @Override
     public void stop() {
         System.out.println("The bicycle has stopped !");
+    }
+
+    @Override
+    public void setTemperature() {
+        // do nothing
     }
 
     public void refuel(){
