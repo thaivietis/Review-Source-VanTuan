@@ -1,10 +1,5 @@
-//Single
-//
-
-public class Car extends Vehicle implements Action{
-
+public class Car extends Vehicle implements Action, Status{
     private ChinaEngine engine;
-
     public Car() {
         super();
         this.engine = new ChinaEngine();
@@ -25,10 +20,12 @@ public class Car extends Vehicle implements Action{
         System.out.println("The temperature is 90F");
     }
 
+    @Override
     public void refuel() {
         System.out.println("The car has been fully refueled");
     }
 }
 
 class ChinaEngine {
+
 }

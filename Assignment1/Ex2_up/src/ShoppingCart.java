@@ -1,17 +1,7 @@
-import java.util.ArrayList;
 import java.util.List;
-// Sigle, Liskov, DI
-public class ShoppingCart {
+public class ShoppingCart implements BookService {
     private List<Book> books;
     private EmailService emailService;
-
-    public void addBook(Book book) {
-        System.out.println("Book added to cart");
-    }
-
-    public void removeBook(Book book) {
-        System.out.println("Book removed from cart");
-    }
 
     public void checkOut() {
         //Do something
@@ -21,6 +11,21 @@ public class ShoppingCart {
 
     private void exportInvoice() {
         System.out.println("Export invoice");
+    }
+
+    @Override
+    public void addBook(Book book) {
+        System.out.println("Book added");
+    }
+
+    @Override
+    public void removeBook(Book book) {
+        System.out.println("Book added");
+    }
+
+    @Override
+    public List<Book> getBooks() {
+        return books;
     }
 }
 

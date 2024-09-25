@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
-
+/*Single, Liskov, Interface, DI, */
 public class Main {
     public static void main(String[] args) {
 
@@ -16,8 +16,5 @@ public class Main {
         printType.print(car);
         printType.print(bicycle);
 
-//        for (Vehicle v : vehicle) {
-//           v.refuel();
-//        }
     }
 }

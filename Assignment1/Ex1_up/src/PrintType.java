@@ -1,4 +1,4 @@
-//
+
 public class PrintType {
     public void print(Vehicle vehicle) {
         if (vehicle instanceof Bicycle) {
